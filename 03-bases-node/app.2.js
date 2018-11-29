@@ -1,11 +1,10 @@
 let { crearArchivo } = require('./multiplicar/multiplicar');
 
-let argv = process.argv;
-let parametro = argv[2];
-let base = parametro.split('=')[1];
+let base = 5;
 
 crearArchivo(base).then(archivo => {
     console.log(`El archivo ${archivo} ha sido creado`);
+    console.log(module);
 }).catch(err => {
     console.log(err);
 });
